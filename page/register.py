@@ -5,9 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def registration_page():
-    st.markdown('<div class="login-box">', unsafe_allow_html=True)
     st.markdown("<h2>Register</h2>", unsafe_allow_html=True)
-
     name = st.text_input("Full Name")
     uname = st.text_input("Username")
     email = st.text_input("Email")

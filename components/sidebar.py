@@ -12,9 +12,14 @@ def sidebar_nav():
         use_container_width=True
     )
     st.sidebar.markdown(f"👋 Welcome, {username}")
-    if st.sidebar.button("👤 Profile", key="profile_btn"):
-        st.session_state.page = "profile"
-        st.rerun()
+    if st.session_state.get("page", "profile") != "profile":
+        if st.sidebar.button("👤 Profile", key="profile_btn"):
+            st.session_state.page = "profile"
+            st.rerun()
+    if st.session_state.get("page", "landing") != "landing":
+        if st.sidebar.button("🏠 Back to Landing Page", key="landing_btn"):
+            st.session_state.page = "landing"
+            st.rerun()
     if st.sidebar.button("🚪 Logout", key="logout_btn"):
         try:
             res = requests.get(LOGOUT_URL, timeout=5)

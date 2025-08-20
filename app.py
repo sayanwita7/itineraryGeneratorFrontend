@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import os
 from dotenv import load_dotenv
-from page import home, landing, login, preferences, register
+from page import home, landing, login, preferences, register, profile, itinerary
 from styles import load_styles
 
 load_dotenv()
@@ -24,3 +24,7 @@ elif st.session_state.page == "landing":
     landing.landing_page()
 elif st.session_state.page == "preferences":
     preferences.preferences_page()
+elif st.session_state.page == "itinerary":
+    itinerary.itinerary_page()
+elif st.session_state.page == "profile":
+    profile.profile_page()
