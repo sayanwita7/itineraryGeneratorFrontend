@@ -3,14 +3,14 @@ Tripzy is a personalized trip planning tool built using Streamlit (Frontend) and
 It generates customized travel itineraries for touring around Kolkata based on preferences like trip duration, budget, travel group and arrival location.
 
 Project Structure for frontend:
-frontend/                       # Streamlit frontend
-   ├── app.py                   # Main Streamlit UI file
-   ├── style.py                 # File containing all common styling
-   ├── page/                    # Pages
-   ├── components/              # Common component across all pages
-   ├── requirements.txt         # Frontend dependencies
-   ├── venv/                    # Virtual environment (not pushed to GitHub)
-   └── .env                     # Frontend environment variables
+frontend : Streamlit frontend
+(a) app.py: Main Streamlit UI file
+(b) style.py : File containing all common styling
+(c) page : Pages
+(d) components : Common component across all pages
+(e) requirements.txt : Frontend dependencies
+(f) venv/ : Virtual environment (not pushed to GitHub)
+(g) .env : Frontend environment variables
 
 Project Setup Guide:
 1. Clone the Repository and navigate to the directory:
