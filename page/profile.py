@@ -9,21 +9,8 @@ load_dotenv()
 def profile_page():
     sidebar.sidebar_nav()
     history_response = {
-        "itineraries": [
-            {
-                "Arrival": "Dumdum Airport",
-                "Budget": "Mid",
-                "Duration": 1,
-                "GroupType": "Solo",
-                "itinerary_id": "68a49649ab1f68798d883ce4"
-            }
-        ],
-        "user_info": {
-            "email": "s@g.com",
-            "name": "sayanwita",
-            "phone": 700120,
-            "username": "sayan"
-        }
+        "itineraries": st.session_state.get("itineraries", []),
+        "user_info": st.session_state.get("user_info", {})
     }
     st.markdown("""
     <style>

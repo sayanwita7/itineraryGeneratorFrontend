@@ -1,8 +1,14 @@
 import streamlit as st
 from components import sidebar
+import time
 import re
 
+def show_loading_screen():
+    with st.spinner("Loading your itinerary..."):
+        time.sleep(1.5)
+
 def itinerary_page():
+    show_loading_screen()
     sidebar.sidebar_nav()
     st.markdown("""
     <style>
